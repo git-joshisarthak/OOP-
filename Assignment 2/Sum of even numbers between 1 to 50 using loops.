@@ -1,1 +1,22 @@
+#include <iostream>
+using namespace std;
 
+int main()
+{
+    int sum = 0; // Variable declaration
+
+    // Loop through numbers from 1 to 50
+    for (int i = 1; i <= 50; i++)
+    {
+        // Check if current number is even (divisible by 2)
+        if (i % 2 == 0)
+        {
+            sum = sum + i; // Add even number to sum
+        }
+    }
+
+    // printing total 
+    cout << "Sum of even numbers between 1 and 50 = " << sum;
+
+    return 0; // end of main function
+}
