@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+float add(float i, float j, float k)
+{
+    return (i+j+k);
+}
+int add (int a, int b)
+{
+    return (a+b);
+}
+int add(float m, float n)
+{
+    return (m+n);
+}
+int main()
+{
+     cout<<add(63.6f, 20.4f, 11.6f)<<endl;
+     cout<<add(75, 25)<<endl;  
+     cout<<add(66.43f, 55.43f)<<endl;      
+}
