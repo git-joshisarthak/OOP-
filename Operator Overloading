@@ -1,23 +1,27 @@
 #include <iostream>
 using namespace std;
 
+// Class representing a Complex Number using operator overloading
 class Complex
 {
-    float real, imag;
+    float real, imag; // Private members for real and imaginary parts
 
 public:
+    // Default constructor: Initializes complex number to 0 + 0i
     Complex()
     {
         real = 0;
         imag = 0;
     }
 
+    // Parameterized constructor: Initializes members with given values
     Complex(float r, float i)
     {
         real = r;
         imag = i;
     }
 
+    // Takes user input for real and imaginary parts
     void accept()
     {
         cout << "Enter real part: ";
@@ -27,6 +31,7 @@ public:
         cin >> imag;
     }
 
+    // Prints complex number in 'a + bi' or 'a - bi' format
     void display()
     {
         cout << real;
@@ -39,16 +44,19 @@ public:
         cout << endl;
     }
 
+    // Overloads '+' operator to add two complex objects using syntax: c1 + c2
     Complex operator+(Complex c)
     {
         return Complex(real + c.real, imag + c.imag);
     }
 
+    // Overloads '-' operator for subtraction using syntax: c1 - c2
     Complex operator-(Complex c)
     {
         return Complex(real - c.real, imag - c.imag);
     }
 
+    // Overloads '*' operator for complex multiplication
     Complex operator*(Complex c)
     {
         return Complex(
@@ -57,6 +65,7 @@ public:
         );
     }
 
+    // Overloads '/' operator for complex division using denominator formula
     Complex operator/(Complex c)
     {
         float denominator =
@@ -71,7 +80,7 @@ public:
 
 int main()
 {
-    Complex c1, c2, result;
+    Complex c1, c2, result; // Calls default constructor for all three
 
     cout << "Enter first complex number:\n";
     c1.accept();
@@ -79,6 +88,7 @@ int main()
     cout << "\nEnter second complex number:\n";
     c2.accept();
 
+    // Perform operations using overloaded operators and display results
     result = c1 + c2;
     cout << "\nAddition: ";
     result.display();
@@ -95,5 +105,5 @@ int main()
     cout << "Division: ";
     result.display();
 
-    return 0;
+    return 0; // end of main function
 }
