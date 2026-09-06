@@ -1,11 +1,13 @@
 #include <iostream>
 using namespace std;
 
+// create Class representing a Complex Number 
 class Complex
 {
-    float real, imag;
+    float real, imag; // variables declaration for real and imaginary parts
 
 public:
+    // Takes user input for real and imaginary parts
     void accept()
     {
         cout << "Enter real part: ";
@@ -15,6 +17,7 @@ public:
         cin >> imag;
     }
 
+    // Prints complex number in 'a + bi' or 'a - bi' format
     void display()
     {
         cout << real;
@@ -27,6 +30,7 @@ public:
         cout << endl;
     }
 
+    // Adds two complex numbers: (a + c) + (b + d)i
     Complex add(Complex c)
     {
         Complex temp;
@@ -34,6 +38,8 @@ public:
         temp.imag = imag + c.imag;
         return temp;
     }
+
+    // Multiplies two complex numbers: (ac - bd) + (ad + bc)i
     Complex multiply(Complex c)
     {
         Complex temp;
@@ -42,6 +48,7 @@ public:
         return temp;
     }
 
+    // Subtracts two complex numbers: (a - c) + (b - d)i
     Complex subtract(Complex c)
     {
         Complex temp;
@@ -50,6 +57,7 @@ public:
         return temp;
     }
 
+    // Divides complex number using denominator formula (c^2 + d^2)
     Complex divide(Complex c)
     {
         Complex temp;
@@ -62,6 +70,7 @@ public:
         return temp;
     }
 
+    // Returns complex conjugate by fliping sign of imaginary part (a - bi)
     Complex conjugate()
     {
         Complex temp;
@@ -73,7 +82,7 @@ public:
 
 int main()
 {
-    Complex c1, c2, result;
+    Complex c1, c2, result; // create Objects for operations
 
     cout << "Enter first complex number:\n";
     c1.accept();
@@ -81,25 +90,30 @@ int main()
     cout << "\nEnter second complex number:\n";
     c2.accept();
 
+    // Perform addition and display outputs
     cout << "\nAddition: ";
     result = c1.add(c2);
     result.display();
 
+    // Perform Multiplication and display outputs
     cout << "Multiplication: ";
     result = c1.multiply(c2);
     result.display();
 
+    // Perform Subtraction and display outputs
     cout << "Subtraction: ";
     result = c1.subtract(c2);
     result.display();
 
+    // Perform Division and display outputs
     cout << "Division: ";
     result = c1.divide(c2);
     result.display();
 
+    // make conjugate and display outputs
     cout << "Conjugate of first number: ";
     result = c1.conjugate();
     result.display();
 
-    return 0;
+    return 0; // end of main function
 }
