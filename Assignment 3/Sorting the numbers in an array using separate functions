@@ -3,7 +3,7 @@ using namespace std;
 
 // Takes input from user for array elements
 void acceptArray(int arr[], int n) {
-    cout << "Enter element are - " << n ;
+    cout << "Enter elements - ";
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
@@ -13,7 +13,7 @@ void acceptArray(int arr[], int n) {
 void displayArray(int arr[], int n) {
     cout << "Array elements are:\n";
     for (int i = 0; i < n; i++) {
-        cout << arr[i];
+        cout << arr[i]<<endl;
     }
 }
 
@@ -29,10 +29,10 @@ void sorting(int arr[], int n) {
 }
 
 // Swaps values of two variables in-place
-void swap(int &m, int &n) {
-    int temp = m;
-    m = n;
-    n = temp;
+void swap(int &x, int &y) {
+    int temp = x;
+    x = y;
+    y = temp;
 }
 
 int main() {
