@@ -1,3 +1,6 @@
+//Name: Sarthak Joshi
+//PRN:B25ET1064
+//Div:SY1 , Batch: C1
 #include<iostream>
 using namespace std;
 
